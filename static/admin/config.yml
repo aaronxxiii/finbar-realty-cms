@@ -7,6 +7,34 @@ media_folder: src/assets
 public_folder: ../../assets/
 
 collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "src/markdowns/homepage/index.md"
+        label: "Homepage Content"
+        name: "homepage"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "homepage",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - {
+              label: "Video Banner",
+              name: "videoBanner",
+              widget: "object",
+              required: false,
+              fields: [
+                { label: "Video File", name: "videoFile", widget: "file", required: false },
+                { label: "Video URL", name: "videoUrl", widget: "string", required: false },
+                { label: "Poster Image", name: "posterImage", widget: "image", required: false },
+                { label: "Alt Text", name: "altText", widget: "string", required: false }
+              ]
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "component"
     label: "Component"
     folder: "src/markdowns/components"

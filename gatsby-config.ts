@@ -40,6 +40,14 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdowns",
+        path: "./src/markdowns/",
+      },
+      __key: "markdowns",
+    },
   ],
 };
 
