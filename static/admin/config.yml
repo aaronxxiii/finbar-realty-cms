@@ -7,12 +7,17 @@ media_folder: src/assets
 public_folder: ../../assets/
 
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "pages"
+    label: "Pages"
+    description: >
+      Where you can edit pages.
+    # folder: "src/markdowns/home"
+    editor:
+      preview: false
     files:
-      - file: "src/markdowns/homepage/index.md"
-        label: "Homepage Content"
-        name: "homepage"
+      - file: "src/markdowns/home/index.md"
+        name: "index"
+        label: "Home"
         fields:
           - {
               label: "Template Key",
@@ -21,35 +26,42 @@ collections:
               default: "homepage",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - {
+              label: "Subtitle",
+              name: "subtitle",
+              widget: "string",
+              required: false,
+            }
           - {
               label: "Video Banner",
               name: "videoBanner",
               widget: "object",
               required: false,
-              fields: [
-                { label: "Video File", name: "videoFile", widget: "file", required: false },
-                { label: "Video URL", name: "videoUrl", widget: "string", required: false },
-                { label: "Poster Image", name: "posterImage", widget: "image", required: false },
-                { label: "Alt Text", name: "altText", widget: "string", required: false }
-              ]
+              fields:
+                [
+                  {
+                    label: "Video File",
+                    name: "videoFile",
+                    widget: "file",
+                    required: false,
+                  },
+                  {
+                    label: "Video URL",
+                    name: "videoUrl",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "Poster Image",
+                    name: "posterImage",
+                    widget: "image",
+                    required: false,
+                  },
+                  {
+                    label: "Alt Text",
+                    name: "altText",
+                    widget: "string",
+                    required: false,
+                  },
+                ],
             }
-          - { label: "Body", name: "body", widget: "markdown" }
-  - name: "component"
-    label: "Component"
-    folder: "src/markdowns/components"
-    create: true
-    slug: "{{path}}"
-    editor:
-      preview: false
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "components",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Path", name: "path", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      
