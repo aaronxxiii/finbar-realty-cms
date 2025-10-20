@@ -102,7 +102,7 @@ Current key dependencies:
 - Tailwind CSS v4 with PostCSS integration
 - Shadcn UI with Radix UI components
 - Gatsby plugins: image, sharp, MDX, manifest, sitemap
-- Netlify CMS integration
+- Decap CMS integration
 
 ## Documentation References
 

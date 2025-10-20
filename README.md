@@ -4,8 +4,12 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  Finbar Realty CMS
 </h1>
+
+<p align="center">
+  A modern real estate CMS built with Gatsby, TypeScript, and Decap CMS
+</p>
 
 ## 🚀 Quick start
 
